@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — Yan Brette</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-logo"><span>~/</span>yan-brette</a>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="projets.html" class="active">Projets</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="entreprise.html">Entreprise</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header" style="position:relative;">
+  <div class="orb orb-1"></div>
+  <div class="breadcrumb"><a href="index.html">Accueil</a> / Projets</div>
+  <h1>Mes <span class="highlight">Projets</span></h1>
+  <p class="lead">Réalisations techniques effectuées en BTS SIO SISR et en alternance chez Vicat.</p>
+</header>
+
+<!-- PROJET PHARE -->
+<section>
+  <div class="section-wrap">
+    <div class="section-tag">Projet principal</div>
+    <h2>Infrastructure Active Directory — DEVIDA</h2>
+    <p class="section-desc">Déploiement complet d'une infrastructure réseau virtualisée sous VMware Workstation, autour du domaine <strong style="color:var(--text)">devida.local</strong>.</p>
+
+    <div class="projects-grid fade-in">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-blue">🗂️</div>
+          <div class="project-tags"><span class="tag">AD DS</span><span class="tag">DNS</span><span class="tag">DHCP</span></div>
+        </div>
+        <div class="project-title">Contrôleur de domaine principal</div>
+        <p class="project-desc">Installation et configuration de Windows Server 2022 en tant que DC principal du domaine <em>devida.local</em>. Mise en place d'Active Directory Domain Services, DNS et DHCP. Adresse : 192.168.10.200.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">Windows Server 2022</div>
+          <div class="info-pill">AD DS</div>
+          <div class="info-pill">VMware</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-cyan">🔁</div>
+          <div class="project-tags"><span class="tag">DC secondaire</span><span class="tag">Redondance</span></div>
+        </div>
+        <div class="project-title">Second contrôleur de domaine</div>
+        <p class="project-desc">Déploiement d'un deuxième contrôleur de domaine pour assurer la redondance du service Active Directory et la haute disponibilité DNS/DHCP dans l'infrastructure DEVIDA.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">Réplication AD</div>
+          <div class="info-pill">Failover DNS</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-green">📦</div>
+          <div class="project-tags"><span class="tag">TrueNAS</span><span class="tag">ZFS</span><span class="tag">SMB</span></div>
+        </div>
+        <div class="project-title">Serveur NAS TrueNAS SCALE</div>
+        <p class="project-desc">Mise en place d'un serveur TrueNAS SCALE (192.168.10.201) avec pool ZFS et partages SMB. Jonction au domaine DEVIDA et mappage automatique du lecteur Z: via GPO pour tous les utilisateurs.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">TrueNAS SCALE</div>
+          <div class="info-pill">ZFS</div>
+          <div class="info-pill">Partage SMB</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-pink">🎫</div>
+          <div class="project-tags"><span class="tag">GLPI</span><span class="tag">XAMPP</span><span class="tag">LDAP</span></div>
+        </div>
+        <div class="project-title">GLPI via XAMPP</div>
+        <p class="project-desc">Installation de GLPI 10.0.16 via XAMPP (après abandon de Docker/WSL2 incompatibles). Synchronisation des comptes utilisateurs avec l'annuaire Active Directory DEVIDA via LDAP.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">GLPI 10.0.16</div>
+          <div class="info-pill">XAMPP</div>
+          <div class="info-pill">LDAP</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-orange">⚙️</div>
+          <div class="project-tags"><span class="tag">GPO</span><span class="tag">Sécurité</span></div>
+        </div>
+        <div class="project-title">Stratégies de groupe (GPO)</div>
+        <p class="project-desc">Configuration de plusieurs GPO : mappage automatique du lecteur réseau Z: vers TrueNAS, déploiement d'un fond d'écran DEVIDA sur les postes, et restrictions utilisateurs par OU.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">Lecteur Z:</div>
+          <div class="info-pill">Fond d'écran</div>
+          <div class="info-pill">Restrictions</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-blue">👥</div>
+          <div class="project-tags"><span class="tag">OU</span><span class="tag">Utilisateurs</span></div>
+        </div>
+        <div class="project-title">Unités organisationnelles & utilisateurs</div>
+        <p class="project-desc">Création des OU (Direction, Informatique, Comptabilité, RH) et des comptes utilisateurs associés : pdg, jmartin, mdurand, sleblanc. Organisation hiérarchique du domaine DEVIDA.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">Active Directory</div>
+          <div class="info-pill">4 OU</div>
+          <div class="info-pill">4 utilisateurs</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJET TP TECHNOLAB -->
+<section class="bg-alt">
+  <div class="section-wrap">
+    <div class="section-tag">TP complémentaire</div>
+    <h2>Environnement technolab.local</h2>
+    <p class="section-desc">Travaux pratiques réalisés sur un environnement séparé dans le cadre de la formation.</p>
+
+    <div class="projects-grid fade-in">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-cyan">🔐</div>
+          <div class="project-tags"><span class="tag">LDAP</span><span class="tag">GLPI Agent</span></div>
+        </div>
+        <div class="project-title">Authentification LDAP & agent GLPI</div>
+        <p class="project-desc">Configuration de l'authentification LDAP dans GLPI sur le domaine <em>technolab.local</em> (SRV-AD : 192.168.10.10). Installation du GLPI Agent sur CLIENT01 (utilisateur amartin) et inventaire forcé.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">technolab.local</div>
+          <div class="info-pill">GLPI Agent</div>
+          <div class="info-pill">CLIENT01</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-green">🌐</div>
+          <div class="project-tags"><span class="tag">VMware</span><span class="tag">Réseaux</span></div>
+        </div>
+        <div class="project-title">Modes réseau VMware</div>
+        <p class="project-desc">Étude et configuration des différents modes réseau VMware Workstation : NAT, Bridge, Host-Only. Application pratique dans le cadre du déploiement des VMs de l'infrastructure.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">VMware Workstation</div>
+          <div class="info-pill">NAT / Bridge</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon icon-pink">🔥</div>
+          <div class="project-tags"><span class="tag">Firewall</span><span class="tag">Windows</span></div>
+        </div>
+        <div class="project-title">Pare-feu Windows & accès GLPI</div>
+        <p class="project-desc">Configuration du pare-feu Windows Server pour autoriser l'accès à GLPI depuis le réseau local. Ouverture des ports nécessaires et tests de connectivité depuis CLIENT01.</p>
+        <div class="info-pills" style="margin-top:.75rem;">
+          <div class="info-pill">Windows Firewall</div>
+          <div class="info-pill">Port 80/443</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="cv.html">CV</a>
+    <a href="competences.html">Compétences</a>
+    <a href="entreprise.html">Entreprise</a>
+    <a href="veille.html">Veille</a>
+  </div>
+  <p>© 2026 — Yan Brette · BTS SIO SISR · Lyon · <a href="https://github.com/21-DEX-25">21-DEX-25</a></p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
