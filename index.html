@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pg-home">
 
 <nav class="topnav">
   <a href="index.html" class="nav-logo"><span>~/</span>yan-brette</a>
@@ -30,7 +30,7 @@
 <section id="hero" style="position:relative;">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
-  <div class="hero-badge">BTS SIO — option SISR · 1ère année · Lyon</div>
+  <div class="hero-badge">BTS SIO — option SISR · 2e année · Lyon</div>
   <h1>Yan Brette<br><span class="highlight">Support &amp; Infra</span><br>Informatique</h1>
   <p class="hero-sub">Étudiant en BTS SIO SISR en alternance chez <strong style="color:var(--text)">Vicat</strong> à L'Isle-d'Abeau. Mon projet phare : l'infrastructure Active Directory <strong style="color:var(--text)">DEVIDA</strong>, avec GLPI, GPO et stockage TrueNAS.</p>
   <div class="hero-btns">
@@ -197,9 +197,9 @@
           <textarea id="msg" placeholder="Bonjour Yan, je souhaite..."></textarea>
         </div>
         <button class="btn-primary" onclick="handleContact()" style="width:100%;justify-content:center;font-size:.92rem;">
-          Envoyer →
+          Envoyer par e-mail →
         </button>
-        <p id="form-feedback" style="margin-top:.75rem;font-size:.82rem;color:var(--accent4);display:none;font-family:var(--mono);">✓ Message envoyé !</p>
+        <p id="form-feedback" style="margin-top:.75rem;font-size:.82rem;color:var(--accent4);display:none;font-family:var(--mono);">Ouverture de votre messagerie…</p>
       </div>
     </div>
   </div>
@@ -229,11 +229,17 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
   function handleContact() {
-    const n = document.getElementById('name').value;
-    const e = document.getElementById('email').value;
-    const m = document.getElementById('msg').value;
-    if (!n || !e || !m) { alert('Merci de remplir tous les champs.'); return; }
+    const n = document.getElementById('name').value.trim();
+    const e = document.getElementById('email').value.trim();
+    const m = document.getElementById('msg').value.trim();
+    if (!n || !e || !m) {
+      alert('Merci de remplir tous les champs.');
+      return;
+    }
     document.getElementById('form-feedback').style.display = 'block';
+    const subject = encodeURIComponent('Contact depuis le portfolio — ' + n);
+    const body = encodeURIComponent('Nom : ' + n + '\nE-mail : ' + e + '\n\n' + m);
+    window.location.href = 'mailto:yanbrette69001@gmail.com?subject=' + subject + '&body=' + body;
   }
 </script>
 </body>
