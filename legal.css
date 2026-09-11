@@ -1,0 +1,139 @@
+/* =========================================================
+   PAGES CONFORMITÉ / CERTIFICATIONS
+   Styles complémentaires, sans modifier la base du portfolio
+========================================================= */
+
+body.pg-legal,
+body.pg-certifications {
+  background-color: #0b120f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+body.pg-legal {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.42), rgba(5,10,8,.66) 50%, rgba(5,10,8,.88)),
+    url("assets/backgrounds/%C3%A9choppe_de_th%C3%A9_sous_la_pluie.png");
+}
+
+body.pg-certifications {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.38), rgba(5,10,8,.62) 50%, rgba(5,10,8,.86)),
+    url("assets/backgrounds/izakaya_sous_la_pluie_vers_le_torii.png");
+}
+
+.legal-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 2.5rem 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.legal-card {
+  background: linear-gradient(145deg, rgba(28,45,36,.82), rgba(12,23,18,.80));
+  border: 1px solid rgba(232,179,120,.18);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  -webkit-backdrop-filter: blur(11px) saturate(118%);
+  backdrop-filter: blur(11px) saturate(118%);
+  box-shadow: 0 14px 38px rgba(0,0,0,.22);
+}
+
+.legal-card h2,
+.legal-card h3 { margin-bottom: .75rem; }
+.legal-card p,
+.legal-card li { color: var(--muted); font-size: .92rem; line-height: 1.75; }
+.legal-card p + p { margin-top: .8rem; }
+.legal-card ul { padding-left: 1.2rem; margin-top: .55rem; }
+.legal-card li { margin-bottom: .45rem; }
+.legal-card a { color: var(--accent1); }
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.legal-grid .legal-card { margin-bottom: 0; }
+
+.legal-kicker {
+  font-family: var(--mono);
+  color: var(--accent2);
+  font-size: .73rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .45rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--mono);
+  font-size: .72rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .9rem;
+  border: 1px solid rgba(232,179,120,.22);
+  background: rgba(11,18,15,.60);
+  color: #d8e3da;
+}
+
+.status-badge.done {
+  border-color: rgba(126,203,146,.38);
+  color: #a9e0ba;
+}
+
+.status-badge.todo {
+  border-color: rgba(232,147,74,.40);
+  color: #f0c894;
+}
+
+.compliance-checks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.compliance-check {
+  display: flex;
+  gap: .65rem;
+  align-items: flex-start;
+  padding: .85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(126,203,146,.20);
+  background: rgba(11,18,15,.50);
+  color: #c6d2c8;
+  font-size: .86rem;
+}
+
+.compliance-check span:first-child { color: var(--accent2); }
+
+.legal-note {
+  border-left: 3px solid var(--accent1);
+  padding: .8rem 1rem;
+  background: rgba(232,147,74,.08);
+  color: #d7cbbb;
+  border-radius: 0 9px 9px 0;
+  font-size: .86rem;
+  margin-top: 1rem;
+}
+
+.legal-updated {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .72rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  body.pg-legal,
+  body.pg-certifications { background-attachment: scroll; }
+  .legal-wrap { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .legal-card { padding: 1.35rem; }
+}
