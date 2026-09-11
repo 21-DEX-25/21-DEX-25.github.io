@@ -1,0 +1,2 @@
+Redeploy trigger — clean portfolio state restored on 2026-09-11.
+This file is intentionally harmless and exists only to create a fresh deployment commit.
