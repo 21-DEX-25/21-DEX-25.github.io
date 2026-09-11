@@ -1,0 +1,352 @@
+@import url("style-base.css");
+
+/* This file is a compatibility snapshot used by style.css. */
+
+/* ---------- FONDS PAR PAGE ---------- */
+body {
+  background-color: #0b120f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body.pg-home,
+body:has(nav.topnav a.active[href="index.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.32), rgba(5,10,8,.52) 52%, rgba(5,10,8,.82)),
+    url("assets/backgrounds/familymart_sous_la_pluie_nocturne.png");
+}
+
+body.pg-apropos,
+body:has(nav.topnav a.active[href="apropos.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.35), rgba(5,10,8,.55) 52%, rgba(5,10,8,.82)),
+    url("assets/backgrounds/izakaya_sous_la_pluie_vers_le_torii.png");
+}
+
+body.pg-cv,
+body:has(nav.topnav a.active[href="cv.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.40), rgba(5,10,8,.58) 52%, rgba(5,10,8,.84)),
+    url("assets/backgrounds/%C3%A9picerie_chaleureuse_sous_la_pluie_nocturne.png");
+}
+
+body.pg-projets,
+body:has(nav.topnav a.active[href="projets.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.32), rgba(5,10,8,.52) 52%, rgba(5,10,8,.82)),
+    url("assets/backgrounds/nuit_pluvieuse_sous_le_train_n%C3%A9on.png");
+}
+
+body.pg-competences,
+body:has(nav.topnav a.active[href="competences.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.38), rgba(5,10,8,.57) 52%, rgba(5,10,8,.84)),
+    url("assets/backgrounds/%C3%A9picerie_chaleureuse_sous_la_pluie_nocturne.png");
+}
+
+body.pg-entreprise,
+body:has(nav.topnav a.active[href="entreprise.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.34), rgba(5,10,8,.54) 52%, rgba(5,10,8,.82)),
+    url("assets/backgrounds/usine_vicat_sous_la_pluie_nocturne.png");
+}
+
+body.pg-veille,
+body:has(nav.topnav a.active[href="veille.html"]) {
+  background-image:
+    linear-gradient(180deg, rgba(5,10,8,.34), rgba(5,10,8,.54) 52%, rgba(5,10,8,.82)),
+    url("assets/backgrounds/%C3%A9choppe_de_th%C3%A9_sous_la_pluie.png");
+}
+
+body::before { opacity: .12; }
+body::after { opacity: .20; }
+
+nav.topnav {
+  background: linear-gradient(180deg, rgba(7,13,11,.90), rgba(7,13,11,.76));
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  backdrop-filter: blur(16px) saturate(125%);
+  border-bottom: 1px solid rgba(232,179,120,.18);
+  box-shadow: 0 10px 35px rgba(0,0,0,.20);
+}
+
+nav.topnav a { position: relative; }
+nav.topnav a:not(.nav-cta)::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -.42rem;
+  width: 0; height: 2px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  transform: translateX(-50%);
+  transition: width .22s ease;
+}
+nav.topnav a:not(.nav-cta):hover::after,
+nav.topnav a.active:not(.nav-cta)::after { width: 70%; }
+
+.nav-cta {
+  box-shadow: 0 0 22px rgba(232,147,74,.30), inset 0 1px rgba(255,255,255,.18);
+}
+
+#hero { isolation: isolate; }
+#hero > * { position: relative; z-index: 2; }
+#hero .orb { z-index: 0 !important; }
+
+body.pg-home #hero::before,
+body:has(nav.topnav a.active[href="index.html"]) #hero::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(650px, calc(100% - 2.5rem));
+  height: 62%;
+  min-height: 430px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(9,17,14,.76), rgba(13,26,20,.48));
+  border: 1px solid rgba(232,179,120,.18);
+  box-shadow: 0 28px 70px rgba(0,0,0,.32), inset 0 1px rgba(255,255,255,.045);
+  -webkit-backdrop-filter: blur(10px) saturate(115%);
+  backdrop-filter: blur(10px) saturate(115%);
+}
+
+#hero h1 { text-shadow: 0 4px 30px rgba(0,0,0,.45); }
+.hero-sub { color: #bcc9bf; text-shadow: 0 2px 14px rgba(0,0,0,.50); }
+.hero-badge {
+  background: rgba(13,25,20,.68);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+.page-header { isolation: isolate; }
+.page-header::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 6.6rem 1.25rem 1.25rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(9,17,14,.72), rgba(13,26,20,.44));
+  border: 1px solid rgba(232,179,120,.15);
+  box-shadow: 0 24px 58px rgba(0,0,0,.24);
+  -webkit-backdrop-filter: blur(9px) saturate(115%);
+  backdrop-filter: blur(9px) saturate(115%);
+}
+.page-header h1,
+.section-wrap > h2 { text-shadow: 0 3px 22px rgba(0,0,0,.34); }
+.page-header .lead,
+.section-desc { color: #aab9ad; }
+
+.stats-bar,
+.bg-alt,
+#contact,
+footer {
+  background: rgba(8,16,13,.66);
+  -webkit-backdrop-filter: blur(8px) saturate(115%);
+  backdrop-filter: blur(8px) saturate(115%);
+}
+.stats-bar { box-shadow: 0 18px 50px rgba(0,0,0,.18); }
+
+.nav-card,
+.about-card,
+.project-card,
+.skill-category,
+.comp-block,
+.cv-wrap,
+.entreprise-stat,
+.mission-item,
+.veille-card,
+.info-pill,
+.contact-link {
+  background: linear-gradient(145deg, rgba(28,45,36,.76), rgba(12,23,18,.72));
+  border-color: rgba(232,179,120,.16);
+  -webkit-backdrop-filter: blur(11px) saturate(118%);
+  backdrop-filter: blur(11px) saturate(118%);
+  box-shadow: 0 14px 38px rgba(0,0,0,.20), inset 0 1px rgba(255,255,255,.035);
+}
+
+.nav-card,
+.project-card,
+.skill-category,
+.comp-block,
+.mission-item,
+.veille-card,
+.contact-link {
+  transition: transform .26s ease, border-color .26s ease, box-shadow .26s ease, background .26s ease;
+}
+.nav-card:hover,
+.project-card:hover,
+.skill-category:hover,
+.comp-block:hover,
+.mission-item:hover,
+.veille-card:hover,
+.contact-link:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232,147,74,.46);
+  box-shadow: 0 22px 52px rgba(0,0,0,.28), 0 0 28px rgba(232,147,74,.08);
+  background: linear-gradient(145deg, rgba(31,50,40,.84), rgba(13,25,20,.80));
+}
+
+.about-card,
+.cv-wrap,
+.comp-block,
+.entreprise-banner { position: relative; overflow: hidden; }
+.about-card::after,
+.cv-wrap::after,
+.comp-block::after,
+.entreprise-banner::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0 44%, rgba(255,255,255,.025) 50%, transparent 56% 100%);
+}
+.entreprise-banner {
+  background: linear-gradient(135deg, rgba(232,147,74,.20), rgba(11,18,15,.74), rgba(126,203,146,.14));
+  -webkit-backdrop-filter: blur(9px) saturate(120%);
+  backdrop-filter: blur(9px) saturate(120%);
+  box-shadow: 0 22px 56px rgba(0,0,0,.24);
+}
+
+body.pg-projets .project-card,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card {
+  padding-top: 8.35rem;
+  min-height: 370px;
+}
+body.pg-projets .project-card::before,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 0; right: 0; top: 0;
+  height: 6.65rem;
+  background-image:
+    linear-gradient(180deg, rgba(4,8,7,.12), rgba(8,16,13,.88)),
+    url("assets/backgrounds/nuit_pluvieuse_sous_le_train_n%C3%A9on.png");
+  background-size: 145%;
+  background-position: center 48%;
+  border-bottom: 1px solid rgba(232,179,120,.13);
+  filter: saturate(.90) contrast(1.04);
+}
+body.pg-projets .project-card:nth-child(2)::before,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card:nth-child(2)::before { background-position: 30% 43%; }
+body.pg-projets .project-card:nth-child(3)::before,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card:nth-child(3)::before { background-position: 70% 55%; }
+body.pg-projets .project-card:nth-child(4)::before,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card:nth-child(4)::before { background-position: 82% 47%; }
+body.pg-projets .project-card:nth-child(5)::before,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card:nth-child(5)::before { background-position: 15% 58%; }
+body.pg-projets .project-card:nth-child(6)::before,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card:nth-child(6)::before { background-position: 55% 42%; }
+body.pg-projets .project-card > *,
+body:has(nav.topnav a.active[href="projets.html"]) .project-card > * { position: relative; z-index: 1; }
+
+.project-icon,
+.nav-card-icon,
+.skill-cat-icon,
+.comp-block-icon,
+.contact-link-icon {
+  box-shadow: inset 0 1px rgba(255,255,255,.10), 0 8px 18px rgba(0,0,0,.16);
+}
+.tag,
+.info-pill,
+.skill-chip { box-shadow: inset 0 1px rgba(255,255,255,.025); }
+
+.cv-section { padding-bottom: 1.35rem; border-bottom: 1px solid rgba(232,179,120,.10); }
+.cv-section:last-child { border-bottom: 0; padding-bottom: 0; }
+.cv-entry { transition: border-color .2s ease, transform .2s ease; }
+.cv-entry:hover { border-left-color: rgba(232,147,74,.60); transform: translateX(3px); }
+.bar-track { box-shadow: inset 0 1px 4px rgba(0,0,0,.38); }
+.bar-fill { box-shadow: 0 0 12px rgba(126,203,146,.16); }
+
+.btn-primary,
+.btn-secondary {
+  letter-spacing: .01em;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+.btn-primary { box-shadow: 0 10px 28px rgba(232,147,74,.23), 0 0 20px rgba(232,147,74,.15); }
+.btn-primary:hover { transform: translateY(-3px); }
+.btn-secondary {
+  background: rgba(10,20,16,.45);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.btn-secondary:hover { background: rgba(23,37,30,.72); transform: translateY(-2px); }
+
+input,
+textarea {
+  background: rgba(13,27,21,.70);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+input:focus,
+textarea:focus { box-shadow: 0 0 0 3px rgba(232,147,74,.09); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent1);
+  outline-offset: 3px;
+}
+::selection { background: rgba(232,147,74,.28); color: var(--text); }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px) scale(.992);
+  filter: blur(2px);
+  transition: opacity .70s ease, transform .70s cubic-bezier(.2,.75,.25,1), filter .70s ease;
+}
+.fade-in.visible { opacity: 1; transform: none; filter: none; }
+
+@keyframes softReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-header h1,
+.page-header .lead,
+#hero h1,
+#hero .hero-sub,
+#hero .hero-btns { animation: softReveal .58s both; }
+.page-header .lead,
+#hero .hero-sub { animation-delay: .06s; }
+#hero .hero-btns { animation-delay: .12s; }
+
+@media (max-width: 900px) {
+  body { background-attachment: scroll; background-position: center top; }
+  body.pg-home #hero::before,
+  body:has(nav.topnav a.active[href="index.html"]) #hero::before {
+    left: .75rem;
+    width: calc(100% - 1.5rem);
+    height: 67%;
+  }
+}
+
+@media (max-width: 700px) {
+  body::after { opacity: .12; }
+  nav.topnav {
+    background: rgba(7,13,11,.94);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  .page-header::before { inset: 6.1rem .65rem .65rem; border-radius: 18px; }
+  body.pg-projets .project-card,
+  body:has(nav.topnav a.active[href="projets.html"]) .project-card {
+    padding-top: 7.8rem;
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  body { background-attachment: scroll; }
+}
