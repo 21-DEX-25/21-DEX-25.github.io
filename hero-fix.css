@@ -1,0 +1,19 @@
+/* Accueil — panneau du hero plus compact pour laisser davantage voir le fond */
+body.pg-home #hero::before,
+body:has(nav.topnav a.active[href="index.html"]) #hero::before {
+  top: 76%;
+  transform: translateY(-50%);
+  height: 46%;
+  min-height: 360px;
+  max-height: 450px;
+}
+
+@media (max-width: 900px) {
+  body.pg-home #hero::before,
+  body:has(nav.topnav a.active[href="index.html"]) #hero::before {
+    top: 50%;
+    height: 67%;
+    min-height: 0;
+    max-height: none;
+  }
+}
