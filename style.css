@@ -435,3 +435,311 @@ textarea:focus-visible {
   }
   body { background-attachment: scroll; }
 }
+/* ---------- RESPONSIVE MOBILE GLOBAL — téléphone / tablette ---------- */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/*
+  Sur mobile, "background-size: cover" utilisait la hauteur de toute la page :
+  l'image était donc énormément zoomée et mal cadrée.
+  Ici l'illustration garde toute sa largeur et reste cadrée en haut de l'écran.
+*/
+@media (max-width: 900px) {
+  body {
+    background-color: #08100d;
+    background-size: 100% 100%, 100% auto !important;
+    background-position: center top, center top !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: scroll, scroll !important;
+  }
+
+  .section-wrap,
+  .page-header,
+  #hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-cards-grid,
+  .projects-grid,
+  .skills-section-grid,
+  .veille-grid,
+  .mission-list,
+  .entreprise-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-grid,
+  .contact-grid,
+  .cv-grid-2 {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Navigation compacte : une seule ligne défilable au lieu d'un gros bloc à deux étages */
+  nav.topnav {
+    display: block;
+    padding: .55rem .65rem;
+    min-height: 0;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  nav.topnav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .35rem !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: .1rem .05rem .35rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  nav.topnav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav.topnav li {
+    flex: 0 0 auto;
+  }
+
+  nav.topnav a {
+    display: block;
+    font-size: .75rem;
+    padding: .42rem .58rem;
+    white-space: nowrap;
+  }
+
+  nav.topnav a:not(.nav-cta)::after {
+    bottom: .05rem;
+  }
+
+  .nav-cta {
+    padding: .42rem .7rem !important;
+    border-radius: 7px;
+  }
+
+  /* Le menu est plus fin, donc on récupère de la place verticale */
+  #hero {
+    min-height: 100svh;
+    padding: 4.8rem 1rem 2.5rem;
+  }
+
+  .page-header {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .page-header::before {
+    inset: 4.15rem .55rem .55rem;
+  }
+
+  .section-wrap,
+  .section-wrap.tight {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-wrap.tight {
+    padding-top: 1rem;
+  }
+
+  /* Toutes les grilles importantes passent proprement sur une seule colonne */
+  .nav-cards-grid,
+  .projects-grid,
+  .skills-section-grid,
+  .veille-grid,
+  .mission-list,
+  .entreprise-stats,
+  .about-grid,
+  .contact-grid,
+  .cv-grid-2,
+  .project-detail-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem;
+  }
+
+  .nav-card,
+  .project-card,
+  .skill-category,
+  .comp-block,
+  .cv-wrap,
+  .about-card,
+  .veille-card,
+  .contact-link,
+  .entreprise-banner,
+  .mission-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-panel {
+    width: 100%;
+    padding: 1.3rem 1.05rem 1.4rem;
+    border-radius: 18px;
+  }
+
+  #hero h1 {
+    font-size: clamp(2.15rem, 12vw, 3.35rem);
+    line-height: 1.04;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    font-size: .62rem;
+    line-height: 1.45;
+    padding: .35rem .65rem;
+    white-space: normal;
+  }
+
+  .hero-sub {
+    font-size: .95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-btns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .7rem;
+  }
+
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 11vw, 3.15rem);
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 8vw, 2.15rem);
+  }
+
+  .stats-bar {
+    padding: 1.4rem 1rem;
+  }
+
+  .stats-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem .6rem;
+  }
+
+  .stat-num {
+    font-size: 1.35rem;
+    overflow-wrap: anywhere;
+  }
+
+  .stat-label {
+    font-size: .68rem;
+  }
+
+  .project-header {
+    flex-wrap: wrap;
+  }
+
+  .project-tags {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
+  .project-title {
+    font-size: 1.05rem;
+  }
+
+  .project-desc,
+  .about-text-block p,
+  .tl-desc {
+    font-size: .9rem;
+  }
+
+  .info-pills,
+  .skills-grid,
+  .tl-chips {
+    gap: .45rem;
+  }
+
+  .info-pill,
+  .skill-chip,
+  .tag {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .cv-wrap,
+  .entreprise-banner {
+    padding: 1.25rem;
+  }
+
+  .comp-block {
+    padding: 1.2rem;
+  }
+
+  .comp-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-link {
+    padding: .9rem;
+  }
+
+  .contact-link-info {
+    min-width: 0;
+  }
+
+  .contact-link-info span {
+    overflow-wrap: anywhere;
+  }
+
+  footer {
+    padding: 1.6rem 1rem;
+  }
+
+  .footer-links {
+    gap: .65rem 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .stats-inner {
+    grid-template-columns: 1fr;
+  }
+
+  nav.topnav a {
+    font-size: .71rem;
+    padding-inline: .5rem;
+  }
+
+  .hero-panel {
+    padding-inline: .9rem;
+  }
+
+  .about-card,
+  .project-card,
+  .nav-card,
+  .skill-category,
+  .comp-block {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}
