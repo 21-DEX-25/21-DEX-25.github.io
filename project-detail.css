@@ -1,0 +1,107 @@
+/* Pages explicatives des projets — pensées pour un jury non technique */
+.project-detail-page .page-header {
+  max-width: 1080px;
+}
+
+.project-detail-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2.5rem 6rem;
+}
+
+.project-detail-hero {
+  overflow: hidden;
+  border: 1px solid rgba(232,179,120,.18);
+  border-radius: 24px;
+  background: rgba(8,16,13,.72);
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.project-detail-hero img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+  background: rgba(3,8,6,.9);
+}
+
+.project-detail-caption {
+  padding: .85rem 1.15rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .72rem;
+  border-top: 1px solid rgba(232,179,120,.12);
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.project-detail-card {
+  background: linear-gradient(145deg, rgba(28,45,36,.78), rgba(12,23,18,.75));
+  border: 1px solid rgba(232,179,120,.16);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 14px 38px rgba(0,0,0,.20);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.project-detail-card.full { grid-column: 1 / -1; }
+
+.project-detail-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: .75rem;
+}
+
+.project-detail-card p,
+.project-detail-card li {
+  color: #b7c4ba;
+  font-size: .94rem;
+  line-height: 1.8;
+}
+
+.project-detail-card ul {
+  padding-left: 1.2rem;
+}
+
+.project-simple-box {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--accent1);
+  background: rgba(232,147,74,.07);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.project-glossary {
+  display: grid;
+  gap: .75rem;
+}
+
+.project-glossary div {
+  padding: .8rem .9rem;
+  border: 1px solid rgba(232,179,120,.12);
+  border-radius: 10px;
+  background: rgba(8,16,13,.38);
+}
+
+.project-glossary strong {
+  color: var(--accent2);
+}
+
+.project-back {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 760px) {
+  .project-detail-shell { padding: 0 1rem 4rem; }
+  .project-detail-grid { grid-template-columns: 1fr; }
+  .project-detail-card.full { grid-column: auto; }
+  .project-detail-hero { border-radius: 18px; }
+}
