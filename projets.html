@@ -40,7 +40,7 @@
     <p class="section-desc">Déploiement complet d'une infrastructure réseau virtualisée sous VMware Workstation, autour du domaine <strong style="color:var(--text)">devida.local</strong>. Les visuels ci-dessous sont des illustrations pédagogiques destinées à rendre l'architecture plus facile à comprendre.</p>
 
     <div class="projects-grid fade-in">
-      <div class="project-card">
+      <a class="project-card project-card-link" href="projet-dc-principal.html" aria-label="Découvrir Contrôleur de domaine principal">
         <div class="project-visual">
           <img src="assets/project-visuals/laboratoire_réseau_cyberpunk_sous_la_pluie.png" alt="Illustration d'un contrôleur de domaine Active Directory avec DNS et DHCP" loading="lazy">
           <span class="project-visual-label">Illustration pédagogique</span>
@@ -49,9 +49,10 @@
         <div class="project-title">Contrôleur de domaine principal</div>
         <p class="project-desc">Installation et configuration de Windows Server 2022 en tant que DC principal du domaine <em>devida.local</em>. Mise en place d'Active Directory Domain Services, DNS et DHCP. Adresse : 192.168.10.200.</p>
         <div class="info-pills" style="margin-top:.75rem;"><div class="info-pill">Windows Server 2022</div><div class="info-pill">AD DS</div><div class="info-pill">VMware</div></div>
-      </div>
+        <div class="project-readmore">Comprendre ce projet simplement <span>→</span></div>
+      </a>
 
-      <div class="project-card">
+      <a class="project-card project-card-link" href="projet-dc-secondaire.html" aria-label="Découvrir Second contrôleur de domaine">
         <div class="project-visual">
           <img src="assets/project-visuals/laboratoire_cyberpunk_de_réplication_ad.png" alt="Illustration de deux contrôleurs de domaine avec réplication Active Directory" loading="lazy">
           <span class="project-visual-label">Illustration pédagogique</span>
@@ -60,9 +61,10 @@
         <div class="project-title">Second contrôleur de domaine</div>
         <p class="project-desc">Déploiement d'un deuxième contrôleur de domaine pour assurer la redondance du service Active Directory et la haute disponibilité DNS/DHCP dans l'infrastructure DEVIDA.</p>
         <div class="info-pills" style="margin-top:.75rem;"><div class="info-pill">Réplication AD</div><div class="info-pill">Failover DNS</div></div>
-      </div>
+        <div class="project-readmore">Comprendre ce projet simplement <span>→</span></div>
+      </a>
 
-      <div class="project-card">
+      <a class="project-card project-card-link" href="projet-truenas.html" aria-label="Découvrir Serveur NAS TrueNAS SCALE">
         <div class="project-visual">
           <img src="assets/project-visuals/serveur_nas_sous_la_pluie_néon.png" alt="Illustration d'un serveur TrueNAS avec stockage ZFS et partages SMB" loading="lazy">
           <span class="project-visual-label">Illustration pédagogique</span>
@@ -71,9 +73,10 @@
         <div class="project-title">Serveur NAS TrueNAS SCALE</div>
         <p class="project-desc">Mise en place d'un serveur TrueNAS SCALE (192.168.10.201) avec pool ZFS et partages SMB. Jonction au domaine DEVIDA et mappage automatique du lecteur Z: via GPO pour tous les utilisateurs.</p>
         <div class="info-pills" style="margin-top:.75rem;"><div class="info-pill">TrueNAS SCALE</div><div class="info-pill">ZFS</div><div class="info-pill">Partage SMB</div></div>
-      </div>
+        <div class="project-readmore">Comprendre ce projet simplement <span>→</span></div>
+      </a>
 
-      <div class="project-card">
+      <a class="project-card project-card-link" href="projet-glpi.html" aria-label="Découvrir GLPI via XAMPP">
         <div class="project-visual">
           <img src="assets/project-visuals/bureau_cyberpunk_glpi_et_intégrations_réseau.png" alt="Illustration de GLPI relié à XAMPP et Active Directory par LDAP" loading="lazy">
           <span class="project-visual-label">Illustration pédagogique</span>
@@ -82,9 +85,10 @@
         <div class="project-title">GLPI via XAMPP</div>
         <p class="project-desc">Installation de GLPI 10.0.16 via XAMPP (après abandon de Docker/WSL2 incompatibles). Synchronisation des comptes utilisateurs avec l'annuaire Active Directory DEVIDA via LDAP.</p>
         <div class="info-pills" style="margin-top:.75rem;"><div class="info-pill">GLPI 10.0.16</div><div class="info-pill">XAMPP</div><div class="info-pill">LDAP</div></div>
-      </div>
+        <div class="project-readmore">Comprendre ce projet simplement <span>→</span></div>
+      </a>
 
-      <div class="project-card">
+      <a class="project-card project-card-link" href="projet-gpo.html" aria-label="Découvrir Stratégies de groupe (GPO)">
         <div class="project-visual">
           <img src="assets/project-visuals/centre_de_contrôle_réseau_cyberpunk.png" alt="Illustration du déploiement de stratégies de groupe GPO vers des postes clients" loading="lazy">
           <span class="project-visual-label">Illustration pédagogique</span>
@@ -93,9 +97,10 @@
         <div class="project-title">Stratégies de groupe (GPO)</div>
         <p class="project-desc">Configuration de plusieurs GPO : mappage automatique du lecteur réseau Z: vers TrueNAS, déploiement d'un fond d'écran DEVIDA sur les postes, et restrictions utilisateurs par OU.</p>
         <div class="info-pills" style="margin-top:.75rem;"><div class="info-pill">Lecteur Z:</div><div class="info-pill">Fond d'écran</div><div class="info-pill">Restrictions</div></div>
-      </div>
+        <div class="project-readmore">Comprendre ce projet simplement <span>→</span></div>
+      </a>
 
-      <div class="project-card">
+      <a class="project-card project-card-link" href="projet-ou-utilisateurs.html" aria-label="Découvrir Unités organisationnelles & utilisateurs">
         <div class="project-visual">
           <img src="assets/project-visuals/centre_de_contrôle_réseau_cyberpunk.png" alt="Illustration de la gestion des utilisateurs, groupes et politiques Active Directory" loading="lazy">
           <span class="project-visual-label">Illustration pédagogique</span>
@@ -104,7 +109,9 @@
         <div class="project-title">Unités organisationnelles & utilisateurs</div>
         <p class="project-desc">Création des OU (Direction, Informatique, Comptabilité, RH) et des comptes utilisateurs associés : pdg, jmartin, mdurand, sleblanc. Organisation hiérarchique du domaine DEVIDA.</p>
         <div class="info-pills" style="margin-top:.75rem;"><div class="info-pill">Active Directory</div><div class="info-pill">4 OU</div><div class="info-pill">4 utilisateurs</div></div>
-      </div>
+        <div class="project-readmore">Comprendre ce projet simplement <span>→</span></div>
+      </a>
+
     </div>
   </div>
 </section>
