@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLPI via XAMPP — Projet DEVIDA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project-detail.css">
+</head>
+<body class="pg-projets project-detail-page">
+
+<nav class="topnav">
+  <a href="index.html" class="nav-logo"><span>~/</span>yan-brette</a>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="projets.html" class="active">Projets</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="entreprise.html">Entreprise</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header" style="position:relative;">
+  <div class="orb orb-1"></div>
+  <div class="breadcrumb"><a href="index.html">Accueil</a> / <a href="projets.html">Projets</a> / GLPI via XAMPP</div>
+  <h1>GLPI via XAMPP</h1>
+  <p class="lead">GLPI est un outil de gestion de parc informatique et de support. Dans le projet DEVIDA, il est installé via XAMPP et relié à l'annuaire Active Directory.</p>
+</header>
+
+<main class="project-detail-shell">
+  <div class="project-back"><a href="projets.html" class="btn-secondary">← Retour à tous les projets</a></div>
+
+  <figure class="project-detail-hero">
+    <img src="assets/project-visuals/bureau_cyberpunk_glpi_et_intégrations_réseau.png" alt="Illustration pédagogique du projet GLPI via XAMPP">
+    <figcaption class="project-detail-caption">Illustration pédagogique — elle sert à expliquer le rôle du projet, ce n'est pas une capture réelle de l'infrastructure.</figcaption>
+  </figure>
+
+  <div class="project-detail-grid">
+    <section class="project-detail-card full">
+      <div class="section-tag">En clair</div>
+      <h2>Qu'est-ce que c'est ?</h2>
+      <p>GLPI est un outil de gestion de parc informatique et de support. Dans le projet DEVIDA, il est installé via XAMPP et relié à l'annuaire Active Directory.</p>
+      <div class="project-simple-box"><strong>Analogie simple :</strong> Pour quelqu'un qui ne connaît pas l'informatique, GLPI peut être vu comme un guichet de support et un inventaire informatique réunis dans une même application.</div>
+    </section>
+
+    <section class="project-detail-card">
+      <div class="section-tag">Utilité</div>
+      <h2>À quoi ça sert ?</h2>
+      <ul><li>Centraliser les informations liées au parc informatique.</li><li>Disposer d'un outil de gestion et de support dans l'infrastructure de cours.</li><li>Réutiliser les comptes du domaine grâce à la liaison LDAP.</li></ul>
+    </section>
+
+    <section class="project-detail-card">
+      <div class="section-tag">DEVIDA</div>
+      <h2>Ce que j'ai mis en place</h2>
+      <ul><li>GLPI 10.0.16 installé via XAMPP.</li><li>Docker/WSL2 ont été abandonnés dans ce projet car cette solution n'était pas compatible avec l'environnement utilisé.</li><li>Synchronisation des comptes avec l'annuaire DEVIDA via LDAP.</li></ul>
+    </section>
+
+    <section class="project-detail-card full">
+      <div class="section-tag">Vocabulaire</div>
+      <h2>Les mots techniques expliqués simplement</h2>
+      <div class="project-glossary"><div><strong>GLPI</strong><br>Application web de gestion de parc et de support informatique.</div><div><strong>XAMPP</strong><br>Ensemble de composants permettant d'héberger localement une application web comme GLPI.</div><div><strong>LDAP</strong><br>Protocole utilisé pour interroger un annuaire comme Active Directory.</div><div><strong>Annuaire</strong><br>Base organisée contenant notamment les comptes utilisateurs et les groupes.</div></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a><a href="apropos.html">À propos</a><a href="cv.html">CV</a><a href="projets.html">Projets</a><a href="competences.html">Compétences</a><a href="entreprise.html">Entreprise</a><a href="veille.html">Veille</a>
+  </div>
+  <p>© 2026 — Yan Brette · BTS SIO SISR · Lyon · <a href="https://github.com/21-DEX-25">21-DEX-25</a></p>
+</footer>
+</body>
+</html>
