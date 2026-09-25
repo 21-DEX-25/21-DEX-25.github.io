@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second contrôleur de domaine — Projet DEVIDA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project-detail.css">
+</head>
+<body class="pg-projets project-detail-page">
+
+<nav class="topnav">
+  <a href="index.html" class="nav-logo"><span>~/</span>yan-brette</a>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="projets.html" class="active">Projets</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="entreprise.html">Entreprise</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header" style="position:relative;">
+  <div class="orb orb-1"></div>
+  <div class="breadcrumb"><a href="index.html">Accueil</a> / <a href="projets.html">Projets</a> / Second contrôleur de domaine</div>
+  <h1>Second contrôleur de domaine</h1>
+  <p class="lead">Le second contrôleur de domaine est un deuxième serveur Active Directory qui travaille avec le serveur principal afin d'éviter qu'un seul serveur soit indispensable au fonctionnement du domaine.</p>
+</header>
+
+<main class="project-detail-shell">
+  <div class="project-back"><a href="projets.html" class="btn-secondary">← Retour à tous les projets</a></div>
+
+  <figure class="project-detail-hero">
+    <img src="assets/project-visuals/laboratoire_cyberpunk_de_réplication_ad.png" alt="Illustration pédagogique du projet Second contrôleur de domaine">
+    <figcaption class="project-detail-caption">Illustration pédagogique — elle sert à expliquer le rôle du projet, ce n'est pas une capture réelle de l'infrastructure.</figcaption>
+  </figure>
+
+  <div class="project-detail-grid">
+    <section class="project-detail-card full">
+      <div class="section-tag">En clair</div>
+      <h2>Qu'est-ce que c'est ?</h2>
+      <p>Le second contrôleur de domaine est un deuxième serveur Active Directory qui travaille avec le serveur principal afin d'éviter qu'un seul serveur soit indispensable au fonctionnement du domaine.</p>
+      <div class="project-simple-box"><strong>Analogie simple :</strong> C'est comme avoir une copie de secours d'un service essentiel : si un serveur est indisponible, l'autre permet de conserver les services principaux du domaine.</div>
+    </section>
+
+    <section class="project-detail-card">
+      <div class="section-tag">Utilité</div>
+      <h2>À quoi ça sert ?</h2>
+      <ul><li>Ajouter de la redondance à Active Directory.</li><li>Répliquer les informations du domaine entre deux serveurs.</li><li>Améliorer la disponibilité des services DNS/DHCP décrits dans le projet.</li></ul>
+    </section>
+
+    <section class="project-detail-card">
+      <div class="section-tag">DEVIDA</div>
+      <h2>Ce que j'ai mis en place</h2>
+      <ul><li>Déploiement d'un deuxième contrôleur de domaine.</li><li>Mise en place de la réplication Active Directory.</li><li>Objectif de redondance et de haute disponibilité pour l'infrastructure DEVIDA.</li></ul>
+    </section>
+
+    <section class="project-detail-card full">
+      <div class="section-tag">Vocabulaire</div>
+      <h2>Les mots techniques expliqués simplement</h2>
+      <div class="project-glossary"><div><strong>Réplication</strong><br>Copie automatique des informations Active Directory entre les contrôleurs de domaine.</div><div><strong>Redondance</strong><br>Présence de plusieurs équipements capables d'assurer un même service.</div><div><strong>Haute disponibilité</strong><br>Organisation visant à garder un service accessible même lorsqu'un élément rencontre un problème.</div></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a><a href="apropos.html">À propos</a><a href="cv.html">CV</a><a href="projets.html">Projets</a><a href="competences.html">Compétences</a><a href="entreprise.html">Entreprise</a><a href="veille.html">Veille</a>
+  </div>
+  <p>© 2026 — Yan Brette · BTS SIO SISR · Lyon · <a href="https://github.com/21-DEX-25">21-DEX-25</a></p>
+</footer>
+</body>
+</html>
