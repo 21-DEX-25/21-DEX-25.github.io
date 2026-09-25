@@ -1,5 +1,4 @@
 @import url("style-base.css");
-@import url("hero-fix.css");
 
 /* =========================================================
    PORTFOLIO BTS SIO SISR — finition présentation orale
@@ -100,24 +99,24 @@ nav.topnav a.active:not(.nav-cta)::after { width: 70%; }
 /* ---------- HERO ACCUEIL ---------- */
 #hero {
   isolation: isolate;
+  align-items: center;
 }
-#hero > * { position: relative; z-index: 2; }
-#hero .orb { z-index: 0 !important; }
+
+#hero > .orb { z-index: 0 !important; }
 
 body.pg-home #hero::before,
 body:has(nav.topnav a.active[href="index.html"]) #hero::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(650px, calc(100% - 2.5rem));
-  height: 62%;
-  min-height: 430px;
+  content: none !important;
+}
+
+.hero-panel {
+  position: relative;
+  z-index: 2;
+  width: min(700px, 100%);
+  margin: 0 auto;
+  padding: 2rem 2.2rem 2.15rem;
   border-radius: 28px;
-  background:
-    linear-gradient(135deg, rgba(9,17,14,.76), rgba(13,26,20,.48));
+  background: linear-gradient(135deg, rgba(9,17,14,.76), rgba(13,26,20,.50));
   border: 1px solid rgba(232,179,120,.18);
   box-shadow: 0 28px 70px rgba(0,0,0,.32), inset 0 1px rgba(255,255,255,.045);
   -webkit-backdrop-filter: blur(10px) saturate(115%);
@@ -127,15 +126,20 @@ body:has(nav.topnav a.active[href="index.html"]) #hero::before {
 #hero h1 {
   text-shadow: 0 4px 30px rgba(0,0,0,.45);
 }
+
 .hero-sub {
   color: #bcc9bf;
   text-shadow: 0 2px 14px rgba(0,0,0,.50);
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
+
 .hero-badge {
   background: rgba(13,25,20,.68);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  margin-bottom: 1.35rem;
 }
 
 /* ---------- EN-TÊTES DES SOUS-PAGES ---------- */
@@ -392,11 +396,8 @@ textarea:focus-visible {
     background-attachment: scroll;
     background-position: center top;
   }
-  body.pg-home #hero::before,
-  body:has(nav.topnav a.active[href="index.html"]) #hero::before {
-    left: .75rem;
-    width: calc(100% - 1.5rem);
-    height: 67%;
+  .hero-panel {
+    width: min(700px, 100%);
   }
 }
 
@@ -410,6 +411,13 @@ textarea:focus-visible {
   .page-header::before {
     inset: 6.1rem .65rem .65rem;
     border-radius: 18px;
+  }
+  .hero-panel {
+    padding: 1.45rem 1.35rem 1.55rem;
+    border-radius: 20px;
+  }
+  .hero-badge {
+    margin-bottom: 1rem;
   }
   body.pg-projets .project-card,
   body:has(nav.topnav a.active[href="projets.html"]) .project-card {
